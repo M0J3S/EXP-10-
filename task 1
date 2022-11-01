@@ -1,0 +1,38 @@
+package experiments;
+Class Base
+{
+Void Display()
+{
+System.out.println(“Message From Base Class.”);
+}
+}
+Class Derived_One extendeds Base
+{
+Void Display()
+{
+System.out.pritnln(“Message From Derived Class One”)
+}
+}
+Class Derived_Two extendeds Base
+{
+Void Display()
+{
+System.out.pritnln("Message From Derived Class Two");
+}
+}
+public class Neeraj_mojes extends Thread
+{
+public static void main(String args[])
+{
+Base base_obj=new Base();
+Derived_One obj_one=new Derived_One();
+Derived_Two obj_two=new Derived_Two();
+Base ref=base_obj;
+ref.Display();
+ref=obj_one;
+ref.Display();
+ref=obj_two;
+ref.Display();
+}
+}
+}

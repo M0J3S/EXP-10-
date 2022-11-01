@@ -1,0 +1,43 @@
+package experiments;
+public class Thread1 extends Thread
+{
+public void ruPrintOddNumber()
+{
+int[] odd = {1,3,5,7,9};
+try
+{
+for(int i=0;i<odd.length;i++)
+{
+System.out.println(odd[i]);
+sleep(200);
+}
+}
+catch(Exception e){ }
+}
+}
+public class Thread2 extends Thread
+{
+public void PrintEvenNumber()
+{
+int[] even= {2,4,6,8,10};
+try
+{
+for(int i=0;i<even.length;i++)
+{
+System.out.println(even[i]);
+sleep(1000);
+}
+}
+catch(Exception d){ }
+}
+}
+public class Neeraj_mojes extends Thread
+{
+public static void main(String args[])
+{
+Thread1 objA=new Thread1();
+Thread2 objB=new Thread2();
+objA.start();
+objB.start();
+}
+}
